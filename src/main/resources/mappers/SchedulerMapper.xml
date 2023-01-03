@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN" "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
-<mapper namespace="">
-    
+<mapper namespace="com.colabear754.scheduler_example.mappers.SchedulerMapper">
+    <insert id="insertData">
+        INSERT INTO scheduler_test
+        VALUES (NOW(), '스케쥴러로 추가된 데이터입니다.')
+    </insert>
+
+    <select id="selectData" resultType="DataDTO">
+        SELECT *
+        FROM scheduler_test
+        ORDER BY inserted_time DESC
+    </select>
 </mapper>
