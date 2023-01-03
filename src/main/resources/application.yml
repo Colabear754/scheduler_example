@@ -1,18 +1,14 @@
 # DB 연결 설정
 spring:
   datasource:
-    url: jdbc:mysql://144.24.71.11:3306/platform_test?characterEncoding=utf8
-    username: root
-    password: zfXK7aHF=eR=
+    url: (db url)
+    username: (db 계정명)
+    password: (db 패스워드)
     driver-class-name: com.mysql.cj.jdbc.Driver
 
 # MyBatis 설정
 mybatis:
-  type-aliases-package: com.entropy.platform_test.dto
+  type-aliases-package: com.colabear754.scheduler_example.dto
   mapper-locations: classpath:/mappers/*Mapper.xml
   configuration:
     jdbc-type-for-null: null
-
-# 포트 설정
-server:
-  port: 9999
