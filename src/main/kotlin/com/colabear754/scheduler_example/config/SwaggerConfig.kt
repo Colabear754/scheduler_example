@@ -1,4 +1,4 @@
-package com.entropy.platform_test.config
+package com.colabear754.scheduler_example.config
 
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
@@ -19,7 +19,7 @@ class SwaggerConfig {
         .produces(getProduceContentTypes())
         .apiInfo(swaggerInfo())
         .select()
-        .apis(RequestHandlerSelectors.basePackage("com.entropy.platform_test.controllers"))
+        .apis(RequestHandlerSelectors.basePackage("com.colabear754.scheduler_example.controllers"))
         .paths(PathSelectors.any())
         .build()
         .useDefaultResponseMessages(false)
@@ -28,8 +28,8 @@ class SwaggerConfig {
     fun defaultViewResolver() = InternalResourceViewResolver()
 
     private fun swaggerInfo() = ApiInfoBuilder()
-        .title("외부 DB 테스트")
-        .description("외부 DB 호출을 테스트합니다.")
+        .title("스케줄러 테스트")
+        .description("스케줄러를 테스트합니다.")
         .version("1.0.0")
         .build()
 
