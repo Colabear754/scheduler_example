@@ -12,3 +12,20 @@ mybatis:
   mapper-locations: classpath:/mappers/*Mapper.xml
   configuration:
     jdbc-type-for-null: null
+
+# Swagger 설정
+springdoc:
+  packages-to-scan: com.colabear754.scheduler_example.controllers
+  api-docs:
+    groups:
+      enabled: true
+  cache:
+    disabled: true
+  default-consumes-media-type: application/json;charset=UTF-8
+  default-produces-media-type: application/json;charset=UTF-8
+  swagger-ui:
+    path: /
+    display-request-duration: true
+    groups-order: desc
+    operations-sorter: method
+    disable-swagger-default-url: true
